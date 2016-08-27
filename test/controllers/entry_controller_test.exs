@@ -27,9 +27,9 @@ defmodule CoffeeSpoons.EntryControllerTest do
   end
 
   test "shows chosen resource", %{conn: conn} do
-    entry = Repo.insert! %Entry{}
+    entry = Repo.insert! %Entry{body: "This text"}
     conn = get conn, entry_path(conn, :show, entry)
-    assert html_response(conn, 200) =~ "Show entry"
+    assert html_response(conn, 200) =~ "This text"
   end
 
   test "renders page not found when id is nonexistent", %{conn: conn} do
