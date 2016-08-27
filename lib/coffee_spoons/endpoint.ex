@@ -3,6 +3,10 @@ defmodule CoffeeSpoons.Endpoint do
 
   socket "/socket", CoffeeSpoons.UserSocket
 
+  if Application.get_env(:coffee_spoons, :sql_sandbox) do
+    plug Phoenix.Ecto.SQL.Sandbox
+  end
+
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest

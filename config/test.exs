@@ -4,7 +4,9 @@ use Mix.Config
 # you can enable the server option below.
 config :coffee_spoons, CoffeeSpoons.Endpoint,
   http: [port: 4001],
-  server: false
+  server: true
+
+config :coffee_spoons, :sql_sandbox, true
 
 # Print only warnings and errors during test
 config :logger, level: :warn
@@ -12,8 +14,8 @@ config :logger, level: :warn
 # Configure your database
 config :coffee_spoons, CoffeeSpoons.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "josh",
+  password: "",
   database: "coffee_spoons_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

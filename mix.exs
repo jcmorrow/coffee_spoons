@@ -18,8 +18,17 @@ defmodule CoffeeSpoons.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {CoffeeSpoons, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+     applications: [
+      :phoenix,
+      :phoenix_pubsub,
+      :phoenix_html,
+      :cowboy,
+      :logger,
+      :gettext,
+      :phoenix_ecto,
+      :postgrex,
+      :httpoison,
+    ]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,7 +46,8 @@ defmodule CoffeeSpoons.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:wallaby, "~> 0.11.1"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
