@@ -1,3 +1,4 @@
 Coffee Spoons
 
 <%= link "New Entry", to: entry_path(@conn, :new) %>
+<%= link "New Counter", to: counter_path(@conn, :new) %>

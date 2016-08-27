@@ -18,6 +18,7 @@ defmodule CoffeeSpoons.Router do
 
     get "/", PageController, :index
 
+    resources "/counters", CounterController
     resources "/entries", EntryController
   end
 
