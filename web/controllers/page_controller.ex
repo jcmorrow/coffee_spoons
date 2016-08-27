@@ -1,0 +1,7 @@
+defmodule CoffeeSpoons.PageController do
+  use CoffeeSpoons.Web, :controller
+
+  def index(conn, _params) do
+    render conn, "index.html"
+  end
+end
