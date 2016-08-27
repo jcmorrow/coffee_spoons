@@ -8,6 +8,7 @@ defmodule CoffeeSpoons.AcceptanceCase do
       import Ecto.Model
       import Ecto.Query, only: [from: 2]
       import CoffeeSpoons.Router.Helpers
+      import CoffeeSpoons.Factory
     end
   end
 

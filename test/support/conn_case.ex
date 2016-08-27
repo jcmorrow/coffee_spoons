@@ -26,6 +26,7 @@ defmodule CoffeeSpoons.ConnCase do
       import Ecto.Query
 
       import CoffeeSpoons.Router.Helpers
+      import CoffeeSpoons.Factory
 
       # The default endpoint for testing
       @endpoint CoffeeSpoons.Endpoint
