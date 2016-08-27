@@ -1,7 +1,15 @@
-<h1><%= Timex.format!(@entry.inserted_at, "%B %e %Y", :strftime) %></h1>
-<%= @entry.body %>
+<div class="entry">
+  <h1><%= Timex.format!(@entry.inserted_at, "%B %e %Y", :strftime) %></h1>
+  <div class="entry-body">
+    <%= @entry.body %>
+  </div>
 
-<ul>
-  <li><%= link "Edit", to: entry_path(@conn, :edit, @entry) %></li>
-  <li><%= link "Back", to: entry_path(@conn, :index) %></li>
-</ul>
+  <ul class="actions">
+    <li>
+      <%= link "Edit", to: entry_path(@conn, :edit, @entry) %>
+    </li>
+    <l>
+      <%= link "All Entries", to: entry_path(@conn, :index) %>
+    </li>
+  </ul>
+</div>

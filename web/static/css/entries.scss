@@ -1,0 +1,29 @@
+.entry {
+  .actions {
+    padding-top: 20px;
+  }
+  .entry-body {
+    font-size: 1.2rem;
+    line-height: 2.3rem;
+    font-family: "Cousine";
+    color: #424242;
+  }
+}
+
+.entry-form {
+  textarea {
+    border: none;
+    box-shadow: none;
+    font-family: "Cousine";
+    font-size: 1.2rem;
+    line-height: 2.3rem;
+    color: #424242;
+    height: 500px;
+    padding: 0;
+  }
+  input[type="submit"] {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+}

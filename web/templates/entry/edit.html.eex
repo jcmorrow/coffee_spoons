@@ -1,4 +1,4 @@
-<h2>Edit entry</h2>
+<h1><%= Timex.format!(@entry.inserted_at, "%B %e %Y", :strftime) %></h1>
 
 <%= render "form.html", changeset: @changeset,
                         action: entry_path(@conn, :update, @entry) %>

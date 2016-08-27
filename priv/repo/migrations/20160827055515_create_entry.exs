@@ -3,7 +3,7 @@ defmodule CoffeeSpoons.Repo.Migrations.CreateEntry do
 
   def change do
     create table(:entries) do
-      add :body, :string
+      add :body, :text
 
       timestamps()
     end
