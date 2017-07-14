@@ -14,7 +14,15 @@ use Mix.Config
 config :coffee_spoons, CoffeeSpoons.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [host: "example.com", port: 80],
+  url: [scheme: "https", host: "ronchon-baguette-35174.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/manifest.json"
+
+ config :coffee_spoons, CoffeeSpoons.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+  ssl: true
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -59,7 +67,3 @@ config :logger, level: :info
 # for the new static assets to be served after a hot upgrade:
 #
 #     config :coffee_spoons, CoffeeSpoons.Endpoint, root: "."
-
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-import_config "prod.secret.exs"
